@@ -1,16 +1,9 @@
 /**
- * @param {number} n - a positive integer
+ * @param {number[]} nums
  * @return {number}
  */
- var hammingWeight = function(n) {
-  let count = 0;
-  while (n) {
-      if (n % 2 === 1) {
-          count++;
-      }
-      n = Math.floor(n / 2);
-  }
-  return count;
+ var removeDuplicates = function(nums) {
+  return [...new Set(nums)]
 };
-const n=11111111111111111111111111111101
-console.log(hammingWeight(n))
+const nums = [1,1,2]
+console.log(removeDuplicates(nums))
